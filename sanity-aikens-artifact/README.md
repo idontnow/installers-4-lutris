@@ -28,4 +28,6 @@
       **** "   xdelta3 -f -d -s \"/home/youruser/Games/sanity-aikens-artifact/drive_c/Program Files/Fox/Sanity/lithtech/sanity.exe\" \"/home/youruser/Downloads/sanity_fix.xdelta\" \"/home/youruser/Games/sanity-aikens-artifact/drive_c/Program Files/Fox/Sanity/lithtech/sanity.exe\""
       **** ""
       **** "After patching, the game should be ready to play!"
+      **** "
+      **** "NOTE: Don't forget to insert/mount the game CD before pressing play! (or you can try bypassing the CD-check by other means)
       **** "------------------------------------------------------------------"
