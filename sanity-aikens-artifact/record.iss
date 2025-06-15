@@ -20,7 +20,7 @@ Result=1
 [SdLicense-0]
 Result=1
 [AskDestPath-0]
-szPath=C:\Sanity
+szPath=C:\Games\Sanity
 Result=1
 [SdOptionsButtons-0]
 Result=102
