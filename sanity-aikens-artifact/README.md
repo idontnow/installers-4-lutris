@@ -2,10 +2,17 @@
       **** "The Lutris installer file can be found on this repo or via Lutris once made public."
       **** "-----------------------------------------------------------------------------------"
 
-           NOTE: record.iss is an InstallShield setup component that allows to silently install the game in the background to C:/Games/Sanity by default (a recommended directory for the game without spaces or an excessive amount of characters in the path).
-           I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
-           It is technically not required, and you may install your game with a custom one or without it at all if you wish.
-           If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
+      **** Be sure to set your preferred resolution under \"Display\" in the game launcher!
+      Select your graphics card under \"Displays\" to see more options under \"Resolutions\" (may need to click multiple times).
+      
+      **** If you experience audio issues (choppy voice overs and sound while music plays fine), you can try the following:
+      Open winecfg ("Wine configuration" under "Sanity: Aiken's Artifact", if running Lutris from Flatpak) , go to the \"Libraries\" tab and set dsound to \"Builtin.\"
+      
+      **** If you have no music in the main menu/cutscenes, check if directmusic and dmusic are installed via winetricks.
+
+      **** NOTE: record.iss is an InstallShield setup component that allows to silently install the game in the background to C:/Games/Sanity by default (a recommended directory for the game without spaces or an excessive amount of characters in the path). I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
+      
+      It is technically not required, and you may install your game with a custom one or without it at all if you wish. If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
       
       **** "------------------------------------------------------------------------"
       **** "Manual Patching Required for Sanity: Aiken's Artifact to play without CD"
