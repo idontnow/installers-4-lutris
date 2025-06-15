@@ -1,5 +1,5 @@
   **** "-------------------------------------------------------------------------------------"
-  **** " The Lutris installer file can be found on this repo or via Lutris once made public. "
+       " The Lutris installer file can be found on this repo or via Lutris once made public. "
   **** "-------------------------------------------------------------------------------------"
 
   You can add Star Wars: Pit Droids to your Lutris library on Lutris.net and install it from there:
@@ -12,7 +12,7 @@
   It is technically not required, and you may install your game with a custom one or without it at all if you wish. If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
   
   **** "-----------------------------------------------------------------------"
-  **** " Manual Patching Required for Star Wars: Pit Droids to play without CD "
+       " Manual Patching Required for Star Wars: Pit Droids to play without CD "
   **** "-----------------------------------------------------------------------"
   
   ****  The game needs a patch that Lutris cannot apply automatically (at least not in the Flatpak version). The game can run without a patch successfully, but it will prompt you to insert your game CD before it plays, which can get annoying if you don't keep the disc spinning in your physical drive or mounted virtually.
@@ -44,7 +44,7 @@
   ****  After patching, the game should be ready to play without a CD inserted/mounted!
 
   **** "------------------------------------------"
-  **** " TIPS & TRICKS & KNOWN ISSUES & SOLUTIONS "
+       " TIPS & TRICKS & KNOWN ISSUES & SOLUTIONS "
   **** "------------------------------------------"
 
   **** If you experience distorted sounds or visual stutter, you can try installing a newer version of QuickTime via winetricks (https://www.pcgamingwiki.com/wiki/Star_Wars:_Pit_Droids#Videos_play_with_distorted_sound_and_visual_stutter)
