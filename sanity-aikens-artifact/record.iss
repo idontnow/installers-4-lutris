@@ -20,12 +20,12 @@ Result=1
 [SdLicense-0]
 Result=1
 [AskDestPath-0]
-szPath=C:\Program Files\Fox\Sanity
+szPath=C:\Sanity
 Result=1
 [SdOptionsButtons-0]
 Result=102
 [SdSelectFolder-0]
-szFolder=Fox Interactive
+szFolder=Fox
 Result=1
 [AskYesNo-0]
 Result=1
