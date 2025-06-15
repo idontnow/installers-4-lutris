@@ -44,7 +44,11 @@
 
       NOTE:  I suggest to make a backup of your original sanity.exe file (and client.dll), just in case.
       
-      ****  5. Copy the patched client.dll and cshell.dll files (that you downloaded in step 2) to the /lithtech/ folder where the sanity.exe is located, overwriting the old client.dll file.
+      ****  5. Copy:
+      the patched client.dll and cshell.dll files (from step 2);
+      SanityUS_NOCD.xdelta OR SanityEU_NOCD.xdelta (from step 3, depending on the version you have);
+               To:
+     The /lithtech/ folder where the sanity.exe is located. Backup or overwrite the original client.dll file.
 
       ****  6. Open a Terminal/Command Prompt from your /lithtech/ folder and run the xdelta3 patch command:
 
