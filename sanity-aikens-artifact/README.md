@@ -1,22 +1,14 @@
-      **** "-----------------------------------------------------------------------------------"
-      **** "The Lutris installer file can be found on this repo or via Lutris once made public."
-      **** "-----------------------------------------------------------------------------------"
-
-      **** Be sure to set your preferred resolution under \"Display\" in the game launcher!
-      Select your graphics card under \"Displays\" to see more options under \"Resolutions\" (may need to click multiple times).
-      
-      **** If you experience audio issues (choppy voice overs and sound while music plays fine), you can try the following:
-      Open winecfg (Wine configuration under "Sanity: Aiken's Artifact" in Lutris, if running Lutris from Flatpak), go to the \"Libraries\" tab and set dsound to \"Builtin.\"
-      
-      **** If you have no music in the main menu/cutscenes, check if directmusic and dmusic are installed via winetricks.
+      **** "-------------------------------------------------------------------------------------"
+      **** " The Lutris installer file can be found on this repo or via Lutris once made public. "
+      **** "-------------------------------------------------------------------------------------"
 
       **** NOTE: record.iss is an InstallShield setup component that allows to silently install the game in the background to C:/Games/Sanity by default (a recommended directory for the game without spaces or an excessive amount of characters in the path). I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
       
       It is technically not required, and you may install your game with a custom one or without it at all if you wish. If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
       
-      **** "------------------------------------------------------------------------"
-      **** "Manual Patching Required for Sanity: Aiken's Artifact to play without CD"
-      **** "------------------------------------------------------------------------"
+      **** "--------------------------------------------------------------------------"
+      **** " Manual Patching Required for Sanity: Aiken's Artifact to play without CD "
+      **** "--------------------------------------------------------------------------"
       
       ****  The game needs a patch that Lutris cannot apply automatically (at least not in the Flatpak version). The game can run without a patch successfully, but it will prompt you to insert your game CD before it plays, which can get annoying if you don't keep the disc spinning in your physical drive or mounted virtually.
             
@@ -58,8 +50,22 @@
                xdelta3 -f -d -s sanity.exe SanityUS_NOCD.xdelta sanity.exe
 
       ****  After patching, the game should be ready to play without a CD inserted/mounted!
-      
-      NOTE: If you can't select your display resolution from the launcher after applying the patch, try changing your resolution through the in-game Display settings.
+
+      **** "------------------------------------------"
+      **** " TIPS & TRICKS & KNOWN ISSUES & SOLUTIONS "
+      **** "------------------------------------------"
+
+      **** Be sure to set your preferred resolution under \"Display\" in the game launcher!
+      Select your graphics card under \"Displays\" to see more options under \"Resolutions\" (may need to click multiple times).
+
+      If you can't select your display resolution from the launcher after applying the patch, try changing your resolution through the in-game Display settings.
       Alternatively, go to the /lithtech/ folder and manually edit the autoexec.cfg settings file:
-"screenwidth" "XXXX"
-"screenheight" "YYYY"
+      "screenwidth" "XXXX"
+      "screenheight" "YYYY"
+      
+      **** If you experience audio issues (choppy voice overs and sound while music plays fine), you can try the following:
+      Open winecfg (Wine configuration under "Sanity: Aiken's Artifact" in Lutris, if running Lutris from Flatpak), go to the \"Libraries\" tab and set dsound to \"Builtin.\"
+      
+      **** If you have no music in the main menu/cutscenes, check if directmusic and dmusic are installed via winetricks.
+
+      **** An optional FoV fix is available (for resolutions wider than 16:9 aspect ratio) here: https://community.pcgamingwiki.com/files/file/2862-sanity-aikens-artifact-fov-fix/
