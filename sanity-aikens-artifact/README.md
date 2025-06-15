@@ -2,8 +2,13 @@
       **** " The Lutris installer file can be found on this repo or via Lutris once made public. "
       **** "-------------------------------------------------------------------------------------"
 
-      **** NOTE: record.iss is an InstallShield setup component that allows to silently install the game in the background to C:/Games/Sanity by default (a recommended directory for the game without spaces or an excessive amount of characters in the path). I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
-      
+      You can add Sanity: Aiken's Artifact to your Lutris library on Lutris.net and install it from there:
+      https://lutris.net/games/sanity-aikens-artifact/
+
+      Alternatively, manually launch the sanity-aikens-artifact-installer.yml found in this repo from within Lutris itself.
+
+      NOTE: record.iss is an InstallShield setup component that allows to silently install the game in the background to C:/Games/Sanity by default (a recommended directory for the game without spaces or an excessive amount of characters in the path).
+      I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
       It is technically not required, and you may install your game with a custom one or without it at all if you wish. If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
       
       **** "--------------------------------------------------------------------------"
