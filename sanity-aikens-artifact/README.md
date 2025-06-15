@@ -54,3 +54,8 @@
                xdelta3 -f -d -s sanity.exe SanityUS_NOCD.xdelta sanity.exe
 
       ****  After patching, the game should be ready to play without a CD inserted/mounted!
+      
+      NOTE: If you can't select your display resolution from the launcher after applying the patch, try changing your resolution through the in-game Display settings.
+      Alternatively, go to the /lithtech/ folder and manually edit the autoexec.cfg settings file:
+"screenwidth" "XXXX"
+"screenheight" "YYYY"
