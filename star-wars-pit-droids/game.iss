@@ -20,7 +20,7 @@ Result=1
 [SdLicense-0]
 Result=1
 [SdAskDestPath-0]
-szDir=C:\Program Files\Lucas Learning\Star Wars Pit Droids
+szDir=C:\Droids
 Result=1
 [SdSetupTypeEx-0]
 Result=Typical
