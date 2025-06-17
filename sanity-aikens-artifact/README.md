@@ -1,17 +1,16 @@
-You can add **Sanity: Aiken's Artifact** to your Lutris library on Lutris.net and install it from there:
+You can add **Sanity: Aiken's Artifact** to your Lutris library on Lutris.net:
 https://lutris.net/games/sanity-aikens-artifact/
 
-Alternatively, manually launch the installer .yml found in this repo from within Lutris itself.
-
-**The Lutris installer file can be found on this repo or via Lutris once made public.**
+**The Lutris installer file can be found on this repo for your own customization.**
 
 **NOTE:** install.iss is an InstallShield setup component that allows to silently install the game in the background to a default directory.
 I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
-It is technically not required, and you may install your game with a custom one or without it at all if you wish. If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
+It is technically not required, and you may install your game with a custom one or without it at all if you wish.
+If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
       
 **Manual Patching Required for Sanity: Aiken's Artifact to play without CD**
       
-The game needs a patch that Lutris cannot apply automatically (at least not in the Flatpak version). The game can run without a patch successfully, but it will prompt you to insert your game CD before it plays, which can get annoying if you don't keep the disc spinning in your physical drive or mounted virtually.
+The game needs a patch that Lutris cannot apply automatically (at least not in the Flatpak version). The game can run without a patch successfully, but it will prompt you to insert your game CD before it plays, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually.
             
 If you wish to play without the game CD, follow these steps:
 
