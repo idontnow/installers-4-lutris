@@ -1,0 +1,49 @@
+name: Sanity - Aiken's Artifact
+game_slug: sanity-aikens-artifact
+version: Installer
+slug: sanity-aikens-artifact-installer
+runner: wine
+
+script:
+  game:
+    exe: $GAMEDIR/drive_c/Games/Sanity/lithtech/sanity.exe
+    prefix: $GAMEDIR
+    arch: win64
+  system:
+    env:
+      LC_ALL: "en_US.UTF-8"
+  files:
+  - 32bit_installer:
+      url: https://github.com/idontnow/installers-4-lutris/raw/refs/heads/main/generic_32bit_installer/setup32.exe
+      filename: setup32.exe
+  installer:
+  - insert-disc:
+      requires: setup.exe
+  - copy:
+      src: $DISC
+      dst: $CACHE
+      description: "Copying CD files to cache"
+  - move:
+      src: "$CACHE/32bit_installer/setup32.exe"
+      dst: $CACHE/
+      description: "Replacing 16-bit installer with 32-bit version"
+  - execute:
+      command: 'mkdir -p "$GAMEDIR/drive_c" && printf "[InstallShield Silent]\nVersion=v3.00.000\nFile=Response File\n[Application]\nName=Sanity\nVersion=1.0\nCompany=Monolith Productions\n[DlgOrder]\nDlg0=SdWelcome-0\nCount=8\nDlg1=SdLicense-0\nDlg2=AskDestPath-0\nDlg3=SdOptionsButtons-0\nDlg4=SdSelectFolder-0\nDlg5=AskYesNo-0\nDlg6=AskYesNo-1\nDlg7=SdFinish-0\n[SdWelcome-0]\nResult=1\n[SdLicense-0]\nResult=1\n[AskDestPath-0]\nszPath=C:\Games\Sanity\nResult=1\n[SdOptionsButtons-0]\nResult=102\n[SdSelectFolder-0]\nszFolder=Fox\nResult=1\n[AskYesNo-0]\nResult=1\n[AskYesNo-1]\nResult=1\n[SdFinish-0]\nResult=1\nbOpt1=0\nbOpt2=0" > "$GAMEDIR/drive_c/install.iss"'
+      description: "Ensuring drive_c directory exists and adding InstallShield .iss response file"
+  - task:
+      executable: "$CACHE/setup32.exe"
+      name: wineexec
+      args: "/s /f1c:/install.iss"
+      prefix: $GAMEDIR
+      env:
+        LC_ALL: "en_US.UTF-8"
+      description: 'Silent-installing game to C:\Games\Sanity'
+  - task:
+      app: dmband dmcompos dmime dmloader dmscript dmstyle dmsynth dmusic dmusic32 dswave
+      arch: win64
+      name: winetricks
+      prefix: $GAMEDIR
+      description: 'Installing directmusic'
+wine:
+overrides:
+  dsound.dll: b
