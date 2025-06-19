@@ -1,7 +1,7 @@
-name: Sanity - Aiken's Artifact
+name: "Sanity: Aiken's Artifact"
 game_slug: sanity-aikens-artifact
-version: Installer
-slug: sanity-aikens-artifact-installer
+version: CD
+slug: sanity-aikens-artifact-CD
 runner: wine
 
 script:
