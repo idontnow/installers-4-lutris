@@ -5,7 +5,7 @@ https://lutris.net/games/star-wars-pit-droids/
 
 **NOTE:** To allow the game access to DirectX and QuickTime runtime files, my script requires:
 1. Using a 32-bit wineprefix
-2. Using Winetricks to set Windows version to Windows 98.
+2. Using Winetricks to set Windows version to Windows 98
   
 I couldn't think of a workaround for Windows XP and above with a 64-bit wineprefix for now, but the script will need to be updated for compatibility once 32-bit wineprefixes will be deprecated.
 
