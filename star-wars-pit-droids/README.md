@@ -8,11 +8,13 @@ I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/50
 It is technically not required, and you may install your game with a custom one or without it at all if you wish.
 If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
   
-**Manual Patching Required for Star Wars: Pit Droids to play without CD**
+**Manual Patching REQUIRED for Star Wars: Pit Droids to play without CD**
   
-The game needs a patch that Lutris cannot apply automatically (at least not in the Flatpak version). The game can run without a patch successfully, but it will prompt you to insert your game CD before it plays, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually.
+The game **REQUIRES** a patch that Lutris cannot apply automatically (at least not in the Flatpak version).*
+
+*The game MAY run without a patch successfully, but that would require additional tweaking for the 16-bit SecuROM which is way outside the scope of my knowledge. Even if you can get that to work, the game will still prompt you to insert your game CD before it plays, and stop you from playing if you eject the CD, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually.
         
-If you wish to play without the game CD, follow these steps:
+Having said that, if you wish to play without the game CD, follow these steps:
 
 1. Install xdelta3:
    Use your package manager (e.g., 'sudo apt install xdelta3')
