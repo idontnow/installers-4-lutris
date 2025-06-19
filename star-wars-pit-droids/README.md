@@ -11,7 +11,7 @@ https://lutris.net/games/star-wars-pit-droids/
   
 I couldn't think of a workaround for Windows XP and above with a 64-bit wineprefix for now, but the script will need to be updated for compatibility once 32-bit wineprefixes will be deprecated.
 
-It appears that the issue with 64-bit wineprefixes is that they install runtimes into the SysWow64 folder and not System32, which is why the game pops up a window "The game requires DirectX 6.1" when you try to play it in a 64-bit Wine prefix.
+It appears that the issue with 64-bit wineprefixes is that they install runtimes into the SysWow64 folder and not System32, which is why the game pops up a window "The game requires DirectX 6.1" when you try to play it in a 64-bit Wine prefix. (https://github.com/lutris/lutris/issues/1850)
 
 
 **Manual Patching REQUIRED for Star Wars: Pit Droids:**
