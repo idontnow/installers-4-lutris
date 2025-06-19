@@ -12,6 +12,9 @@ script:
   system:
     env:
       LC_ALL: "en_US.UTF-8"
+  wine:
+    overrides:
+      dsound.dll: b
   files:
   - 32bit_installer:
       url: https://github.com/idontnow/installers-4-lutris/raw/refs/heads/main/generic_32bit_installer/setup32.exe
@@ -44,6 +47,3 @@ script:
       name: winetricks
       prefix: $GAMEDIR
       description: 'Installing directmusic'
-wine:
-overrides:
-  dsound.dll: b
