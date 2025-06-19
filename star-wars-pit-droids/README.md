@@ -9,6 +9,8 @@ https://lutris.net/games/star-wars-pit-droids/
   
 I couldn't think of a workaround for Windows XP and above with a 64-bit wineprefix for now, but the script will need to be updated for compatibility once 32-bit wineprefixes will be deprecated.
 
+It appears that the issue with 64-bit wineprefixes is that they install runtimes into the SysWow64 folder and not System32, which is why the game pops up a window "The game requires DirectX 6.1" when you try to play it in a 64-bit Wine prefix.
+
 **NOTE:** install.iss is an InstallShield setup component that allows to silently install the game in the background to a default directory.
 I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
 It is technically not required, and you may install your game with a custom one or without it at all if you wish.
@@ -21,7 +23,7 @@ If you do decide to deviate, be mindful that the default game paths need to be a
   
 The game **REQUIRES** these patches that Lutris cannot apply automatically (at least not in the Flatpak version).*
 
-*The game MAY run and play without a patch, but that would at least require additional tweaking for the 16-bit SecuROM which is way outside the scope of my knowledge. Even if you can get that to work, the game will still prompt you to insert your game CD before it plays, and stop you from playing if you eject the CD, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually.
+*The game MAY run and play without a patch, but that would at least require additional tweaking for the 16-bit SafeDisc DRM (https://www.pcgamingwiki.com/wiki/Star_Wars:_Pit_Droids#cite_note-3) which is way outside the scope of my knowledge. Even if you can get that to work, the game will still prompt you to insert your game CD before it plays, and stop you from playing if you eject the CD, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually.
         
 Having said that, if you wish to play without the game CD, follow these steps:
 
