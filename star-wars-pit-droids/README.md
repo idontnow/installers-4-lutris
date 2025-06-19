@@ -3,16 +3,25 @@ https://lutris.net/games/star-wars-pit-droids/
 
 **The Lutris installer file can be found on this repo for your own customization.**
 
+**NOTE:** To allow the game access to DirectX and QuickTime runtime files, my script requires:
+1. Using a 32-bit wineprefix
+2. Using Winetricks to set Windows version to Windows 98.
+  
+I couldn't think of a workaround for Windows XP and above with a 64-bit wineprefix for now, but the script will need to be updated for compatibility once 32-bit wineprefixes will be deprecated.
+
 **NOTE:** install.iss is an InstallShield setup component that allows to silently install the game in the background to a default directory.
 I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
 It is technically not required, and you may install your game with a custom one or without it at all if you wish.
 If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
   
-**Manual Patching REQUIRED for Star Wars: Pit Droids to play without CD**
-  
-The game **REQUIRES** a patch that Lutris cannot apply automatically (at least not in the Flatpak version).*
+**Manual Patching REQUIRED for Star Wars: Pit Droids:**
 
-*The game MAY run without a patch successfully, but that would require additional tweaking for the 16-bit SecuROM which is way outside the scope of my knowledge. Even if you can get that to work, the game will still prompt you to insert your game CD before it plays, and stop you from playing if you eject the CD, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually.
+1. QuickTime 'Safe Mode (GDI only)' patch - for old Cinepak videos to play
+2. 16-bit SecuROM patch - for playing without CD checks
+  
+The game **REQUIRES** these patches that Lutris cannot apply automatically (at least not in the Flatpak version).*
+
+*The game MAY run and play without a patch, but that would at least require additional tweaking for the 16-bit SecuROM which is way outside the scope of my knowledge. Even if you can get that to work, the game will still prompt you to insert your game CD before it plays, and stop you from playing if you eject the CD, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually.
         
 Having said that, if you wish to play without the game CD, follow these steps:
 
