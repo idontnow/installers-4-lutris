@@ -16,6 +16,8 @@ TIPS & TRICKS & KNOWN ISSUES & SOLUTIONS
 
    *For stability, restrict the game to 1 CPU core and set 30-60 FPS limit (higher FPS = more glitches).
    
+   *Enable 3D Hardware in Graphics options in-game for better performance!
+   
    *Use dgVoodoo for higher resolutions than 640x480.
    
    *Install "winetricks icodecs" in the game prefix to play videos (not included in the installer for Lutris Flatpak version compatibility). If all else fails for Lutris Flatpak - you can install icodecs using your system winetricks by specifying the wineprefix folder; then set Lutris to use that.
