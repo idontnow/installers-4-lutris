@@ -1,7 +1,9 @@
 You can add the old Blair Witch Volume trilogy of games to your Lutris library on Lutris.net:
 
 Volume I - https://lutris.net/games/blair-witch-volume-i-rustin-parr/
+
 Volume II - https://lutris.net/games/blair-witch-volume-ii-the-legend-of-coffin-rock/
+
 Volume III - https://lutris.net/games/blair-witch-volume-iii-the-elly-kedward-tale/
 
 The Lutris installer files can be found on this repo for your own customization.
