@@ -1,0 +1,31 @@
+name: "Blair Witch Volume I - Rustin Parr"
+game_slug: blair-witch-volume-1-rustin-parr
+version: CD
+slug: blair-witch-volume-1-rustin-parr-CD
+runner: wine
+
+script:
+  game:
+    exe: $GAMEDIR/drive_c/BWVOL1/nocturne.exe
+    prefix: $GAMEDIR
+  installer:
+  - insert-disc:
+      requires: setup.exe
+  - copy:
+      src: $DISC
+      dst: $CACHE
+      description: "Copying CD files to cache ..."
+  - execute:
+      command: 'mkdir -p "$GAMEDIR/drive_c" && printf "[InstallShield Silent]\nVersion=v5.00.000\nFile=Response File\n[File Transfer]\nOverwriteReadOnly=NoToAll\n[DlgOrder]\nDlg0=SdWelcome-0\nCount=5\nDlg1=SdLicense-0\nDlg2=SdAskDestPath-0\nDlg3=SdSelectFolder-0\nDlg4=SdFinish-0\n[SdWelcome-0]\nResult=1\n[SdLicense-0]\nResult=1\n[SdAskDestPath-0]\nszDir=C:\BWVOL1\nResult=1\n[SdSelectFolder-0]\nszFolder=Blair Witch Volume One - Rustin Parr\nResult=1\n[Application]\nName=Blair Witch Volume One - Rustin Parr\nVersion=1.00.000\nCompany=Terminal Reality\nLang=0009\n[SdFinish-0]\nResult=1\nbOpt1=0\nbOpt2=0" > "$GAMEDIR/drive_c/install.iss"'
+      description: "Ensuring drive_c directory exists and adding InstallShield .iss response file"
+  - task:
+      executable: "$CACHE/Setup.exe"
+      name: wineexec
+      args: "/s /f1c:/install.iss"
+      prefix: $GAMEDIR
+      description: 'Silent-installing game to C:\BWVOL1 ...'
+  - task:
+      app: dotnet35
+      name: winetricks
+      prefix: $GAMEDIR
+      description: 'Installing winetricks component - dotnet35 (can take a few minutes) ...' 
