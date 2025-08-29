@@ -1,0 +1,27 @@
+name: "Blair Witch: Volume II - The Legend of Coffin Rock"
+game_slug: blair-witch-volume-ii-the-legend-of-coffin-rock
+version: CD
+slug: blair-witch-volume-ii-the-legend-of-coffin-rock-CD
+runner: wine
+
+script:
+  game:
+    prefix: $GAMEDIR
+    exe: $GAMEDIR/drive_c/BWVOL2/blairwitch2.exe
+  installer:
+  - task:
+      name: create_prefix
+      arch: win64
+      description: 'Creatine wine prefix ...'
+  - task:
+      app: dotnet48
+      name: winetricks
+      prefix: $GAMEDIR
+      description: 'Installing winetricks component - dotnet48 (can take a few minutes) ...'
+  - insert-disc:
+      requires: Blair Witch II.msi
+  - task:
+      name: wineexec
+      executable: msiexec
+      args: /i "$DISC/Blair Witch II.msi" /qn INSTALLDIR="C:\BWVOL2" LAUNCHPROGRAM=0 LAUNCHREADME=0
+      description: 'Silent-installing game to C:/BWVOL2 ...'
