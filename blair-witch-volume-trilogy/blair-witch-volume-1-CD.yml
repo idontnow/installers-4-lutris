@@ -1,7 +1,7 @@
 name: "Blair Witch Volume I - Rustin Parr"
-game_slug: blair-witch-volume-1-rustin-parr
+game_slug: blair-witch-volume-i-rustin-parr
 version: CD
-slug: blair-witch-volume-1-rustin-parr-CD
+slug: blair-witch-volume-i-rustin-parr-CD
 runner: wine
 
 script:
