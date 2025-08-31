@@ -1,0 +1,31 @@
+name: "Blair Witch: Volume III - The Elly Kedward Tale"
+game_slug: blair-witch-volume-iii-the-elly-kedward-tale
+version: CD
+slug: blair-witch-volume-iii-the-elly-kedward-tale-CD
+runner: wine
+
+script:
+  game:
+    exe: $GAMEDIR/drive_c/BWVOL3/bw3.exe
+    prefix: $GAMEDIR
+  installer:
+  - task:
+      name: create_prefix
+      arch: win64
+      description: 'Creatine wine prefix ...'
+  - task:
+      app: dotnet48
+      name: winetricks
+      prefix: $GAMEDIR
+      description: 'Installing winetricks component - dotnet48 (can take a few minutes) ...' 
+  - execute:
+      command: 'printf "[InstallShield Silent]\nVersion=v6.00.000\nFile=Response File\n[File Transfer]\nOverwrittenReadOnly=NoToAll\n[{F7955AEF-6249-4662-9D6B-DABB8531D83A}-DlgOrder]\nDlg0={F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdWelcome-0\nCount=6\nDlg1={F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdLicense-0\nDlg2={F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdShowInfoList-0\nDlg3={F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdAskDestPath-0\nDlg4={F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdSelectFolder-0\nDlg5={F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdFinish-0\n[{F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdWelcome-0]\nResult=1\n[{F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdLicense-0]\nResult=1\n[{F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdShowInfoList-0]\nResult=1\n[{F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdAskDestPath-0]\nszDir=C:\BWVOL3\nResult=1\n[{F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdSelectFolder-0]\nszFolder=Blair Witch Volume Three - Elly Kedward\nResult=1\n[Application]\nName=Blair Witch Volume Three - Elly Kedward\nVersion=1.00.000\nCompany=Ritual Entertainment\nLang=0009\n[{F7955AEF-6249-4662-9D6B-DABB8531D83A}-SdFinish-0]\nResult=1\nbOpt1=0\nbOpt2=0" > "$GAMEDIR/drive_c/install.iss"'
+      description: "Creating InstallShield .iss response file ..."
+  - insert-disc:
+      requires: autorun.exe
+  - task:
+      executable: "$DISC/Install/Setup.exe"
+      name: wineexec
+      args: "/s /f1c:/install.iss"
+      prefix: $GAMEDIR
+      description: 'Silent-installing game to C:\BWVOL3 ...'
