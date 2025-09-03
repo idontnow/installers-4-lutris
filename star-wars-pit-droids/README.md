@@ -37,11 +37,11 @@ Having said that, if you wish to play without the game CD and with videos workin
 
   1.3   Locate the original game .exe file (Pit Droids.exe)
   
-    It's in your game's Wine prefix: {{ game.prefix }}/drive_c/Program Files/Lucas Learning/Star Wars Pit Droids/Pit Droids.exe
+    It's in your game's Wine prefix: {{ game.prefix }}/drive_c/Droids/Pit Droids.exe
 
   Example:
   
-    /home/youruser/Games/sanity-aikens-artifact/drive_c/Program Files/Lucas Learning/Star Wars Pit Droids/Pit Droids.exe
+    /home/youruser/Games/star-wars-pit-droids/drive_c/Droids/Pit Droids.exe
 
   1.4   Open a Terminal/Command Prompt from your /Star Wars Pit Droids/ folder and run the xdelta3 patch command
   
