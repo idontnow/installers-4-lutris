@@ -2,54 +2,52 @@ You can add **Sanity: Aiken's Artifact** to your Lutris library on Lutris.net:
 https://lutris.net/games/sanity-aikens-artifact/
 
 **The Lutris installer file can be found on this repo for your own customization.**
-
-**NOTE:** install.iss is an InstallShield setup component that allows to silently install the game in the background to a default directory.
-I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
-It is technically not required, and you may install your game with a custom one or without it at all if you wish.
-If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
-      
+   
 **Manual Patching Required for Sanity: Aiken's Artifact to play without CD**
       
 The game needs a patch that Lutris cannot apply automatically (at least not in the Flatpak version). The game can run without a patch successfully, but it will prompt you to insert your game CD before it plays, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually.
             
-If you wish to play without the game CD, follow these steps:
+That said, if you wish to play without the game CD, follow these steps:
 
-1. Install xdelta3:
-   Use your package manager (e.g., 'sudo apt install xdelta3')
+1. Download/Install xdelta
+
+         Use your package manager (e.g., 'sudo apt install xdelta3')
                
    Helpful guide: https://command-not-found.com/xdelta3
 
-2. Download an extract the patched client.dll and cshell.dll files (created by user CyberDemon@) from here:
-      
+2. Download "patched dll" files
+
+   https://www.myabandonware.com/game/sanity-aiken-s-artifact-eo3#download
+
+   Mirror:
    https://www.old-games.ru/game/download/get.php?fileid=27696&modal=1
+
+         Compressed archive contains patched "client.dll" and "cshell.dll" files, and some simple instructions.
       
-3. Download the .xdelta patch file for the version of the game you have from this repo:
+3. Download the .xdelta patch file for the version of the game you have from this repo
       
-        a)  SanityUS_NOCD.xdelta - for "Sanity Aiken's Artifact" (US version)
+        a)  SanityUS_NOCD.xdelta - for "Sanity: Aiken's Artifact" (US version)
         b)  SanityEU_NOCD.xdelta - for "Aiken's Artifact" (EU/UK version)*
 
-4. Locate the original game .exe file (sanity.exe/Sanity.exe):
-   It's in your game's Wine prefix: {{ game.prefix }}/drive_c/Games/Sanity/lithtech/sanity.exe OR {{ game.prefix }}/drive_c/Games/Sanity/LITHTECH/Sanity.exe
+4. Locate the folder containing the original game .exe file (sanity.exe)
+
+   It's in your game's Wine prefix:
+
+         {{ game.prefix }}/drive_c/Games/Sanity/lithtech/sanity.exe
 
    Example:
 
         /home/youruser/Games/sanity-aikens-artifact/drive_c/Games/Sanity/lithtech/sanity.exe
-
-   NOTE:  I suggest to make a backup of your original sanity.exe file (and client.dll), just in case.
       
-5. Copy:
+5. Copy the patch files to the /lithtech/ folder containing "sanity.exe"
 
-        the patched client.dll and cshell.dll files (from step 2);
-        +
-        SanityUS_NOCD.xdelta OR SanityEU_NOCD.xdelta (from step 3, depending on the version you have);
+         e.g. /home/youruser/Games/sanity-aikens-artifact/drive_c/Games/Sanity/lithtech/
+   
+         ADD "SanityUS_NOCD.xdelta" (or "SanityEU_NOCD.xdelta")
+         ADD "cshell.dll"
+         OVERWRITE existing "client.dll"
 
-   To:
-
-        The /lithtech/ folder where the sanity.exe is located.
-
-   Overwrite the original client.dll file.
-
-6. Open a Terminal/Command Prompt from your /lithtech/ folder and run the xdelta3 patch command:
+6. Open a Terminal/Command Prompt from your /lithtech/ folder and run the xdelta patch command:
 
         xdelta3 -f -d -s [game.exe] [patch_file.xdelta] [game.exe]
 
@@ -76,3 +74,8 @@ Open **winecfg**/**Wine Configuration** for your game, go to the **Libraries** t
 If you have no music in the main menu/cutscenes, check if **directmusic** and **dmusic** are installed via **winetricks**.
 
 An optional FoV fix is available (for resolutions wider than 16:9 aspect ratio) here: https://community.pcgamingwiki.com/files/file/2862-sanity-aikens-artifact-fov-fix/
+
+**NOTE:** install.iss is an InstallShield setup component that allows to silently install the game in the background to a default directory.
+I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
+It is technically not required, and you may install your game with a custom one or without it at all if you wish.
+If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
