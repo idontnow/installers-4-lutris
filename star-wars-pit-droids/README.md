@@ -7,7 +7,7 @@ https://lutris.net/games/star-wars-pit-droids/
 
 **Manual Patching REQUIRED for Star Wars: Pit Droids:**
 
-The game **REQUIRES** these patches that Lutris cannot apply automatically (at least not in the Flatpak version).*¹
+The game **REQUIRES**¹ these patches that Lutris cannot apply automatically (at least not in the Flatpak version).
 
 **1. 16-bit SecuROM patch** - .xdelta patch for playing without CD check (that is not compatible with modern version of Windows/Wine prefixes); requires xdelta and cannot be applied automatically in Flatpak version of Lutris.
 
@@ -74,4 +74,4 @@ If you do decide to deviate, be mindful that the default game paths need to be a
 
 **FOOT NOTES**
 
-¹The game MAY run and play without a patch, but that would at least require additional tweaking for the 16-bit SafeDisc DRM for compatibility with modern versions of Windows (https://www.pcgamingwiki.com/wiki/Star_Wars:_Pit_Droids#cite_note-3) which is way outside the scope of my knowledge. Even if you could get that to work, the game would still prompt you to insert your game CD before it plays, and stop you from playing whenever you eject the CD, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually all the time.
+¹The game MAY run and play without a patch, but that would at least require additional tweaking of the 16-bit SafeDisc DRM for compatibility with modern versions of Windows (https://www.pcgamingwiki.com/wiki/Star_Wars:_Pit_Droids#cite_note-3) which is way outside the scope of my knowledge. Even if you could get that to work, the game would still prompt you to insert your game CD before it plays, and stop you from playing whenever you eject the CD, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually all the time.
