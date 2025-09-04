@@ -35,8 +35,7 @@ script:
       dst: $CACHE/Lucas Learning Folder/Pit Droids/
       src: 32bit_installer
   - execute:
-      command: printf "[InstallShield Silent]\nVersion=v5.00.000\nFile=Response File\n[DlgOrder]\nDlg0=SdWelcome-0\nCount=12\nDlg1=SdLicense-0\nDlg2=SdAskDestPath-0\nDlg3=SdSetupTypeEx-0\nDlg4=SdSelectFolder-0\nDlg5=SdStartCopy-0\nDlg6=MessageBox-0\nDlg7=AskOptions-0\nDlg8=MessageBox-1\nDlg9=AskOptions-1\nDlg10=AskYesNo-0\nDlg11=MessageBox-2\n[SdWelcome-0]\nResult=1\n[SdLicense-0]\nResult=1\n[SdAskDestPath-0]\nszDir=C:\Droids\nResult=1\n[SdSetupTypeEx-0]\nResult=Typical\n[SdSelectFolder-0]\nszFolder=Lucas Learning\nResult=1\n[SdStartCopy-0]\nResult=1\n[Application]\nName=Star Wars Pit Droids\nVersion=1.0\nCompany=Lucas Learning\n[MessageBox-0]\nResult=1\n[AskOptions-0]\nResult=1\nSel-0=1\n[MessageBox-1]\nResult=1\n[AskOptions-1]\nResult=1\nSel-0=0\n[AskYesNo-0]\nResult=0\n[MessageBox-2]\nResult=1"
-      > "$GAMEDIR/drive_c/install.iss"
+      command: printf "[InstallShield Silent]\nVersion=v5.00.000\nFile=Response File\n[DlgOrder]\nDlg0=SdWelcome-0\nCount=12\nDlg1=SdLicense-0\nDlg2=SdAskDestPath-0\nDlg3=SdSetupTypeEx-0\nDlg4=SdSelectFolder-0\nDlg5=SdStartCopy-0\nDlg6=MessageBox-0\nDlg7=AskOptions-0\nDlg8=MessageBox-1\nDlg9=AskOptions-1\nDlg10=AskYesNo-0\nDlg11=MessageBox-2\n[SdWelcome-0]\nResult=1\n[SdLicense-0]\nResult=1\n[SdAskDestPath-0]\nszDir=C:\Droids\nResult=1\n[SdSetupTypeEx-0]\nResult=Typical\n[SdSelectFolder-0]\nszFolder=Lucas Learning\nResult=1\n[SdStartCopy-0]\nResult=1\n[Application]\nName=Star Wars Pit Droids\nVersion=1.0\nCompany=Lucas Learning\n[MessageBox-0]\nResult=1\n[AskOptions-0]\nResult=1\nSel-0=1\n[MessageBox-1]\nResult=1\n[AskOptions-1]\nResult=1\nSel-0=0\n[AskYesNo-0]\nResult=0\n[MessageBox-2]\nResult=1" > "$GAMEDIR/drive_c/install.iss"
       description: Generating silent install response file ...
   - task:
       args: /s /f1c:/install.iss
