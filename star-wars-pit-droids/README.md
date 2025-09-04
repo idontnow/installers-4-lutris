@@ -5,29 +5,22 @@ https://lutris.net/games/star-wars-pit-droids/
 **The Lutris installer file can be found on this repo for your own customization.**
 
 
-**NOTE:** To allow the game access to DirectX and QuickTime runtime files, my script requires:
-1. Using a 32-bit wineprefix
-2. Using Winetricks to set Windows version to Windows 98
-  
-I couldn't think of a workaround for Windows XP and above with a 64-bit wineprefix for now, but the script will need to be updated for compatibility once 32-bit wineprefixes will be deprecated.
-
-It appears that the issue with 64-bit wineprefixes is that they install runtimes into the SysWow64 folder and not System32, which is why the game pops up a window "The game requires DirectX 6.1" when you try to play it in a 64-bit Wine prefix. (https://github.com/lutris/lutris/issues/1850)
-
-
 **Manual Patching REQUIRED for Star Wars: Pit Droids:**
 
-**1. 16-bit SecuROM patch** - .xdelta patch for playing without CD checks; cannot be applied automatically in Flatpak version of Lutris
-**2. QuickTime 'Safe Mode (GDI Only)' tweak** - for old Cinepak videos to play; couldn't find a way to automate this in the installer script
-  
 The game **REQUIRES** these patches that Lutris cannot apply automatically (at least not in the Flatpak version).*¹
+
+**1. 16-bit SecuROM patch** - .xdelta patch for playing without CD check (that is not compatible with modern version of Windows/Wine prefixes); requires xdelta and cannot be applied automatically in Flatpak version of Lutris.
+
+**2. QuickTime 'Safe Mode (GDI Only)' tweak** - for old Cinepak videos to play; couldn't find a way to automate this in the installer script.
+
         
-Having said that, if you wish to play without the game CD and with videos working properly, follow these steps:
+Having said that, to allow the game to work properly, follow these steps:
 
 **1. 16-bit SecuROM patch**
 
-  1.1   Install xdelta3
+  1.1   Download/Install xdelta
 
-    Use your package manager (e.g., 'sudo apt install xdelta3')
+    You can use your package manager (e.g., 'sudo apt install xdelta3')
   
   Helpful guide: https://command-not-found.com/xdelta3
 
@@ -35,7 +28,7 @@ Having said that, if you wish to play without the game CD and with videos workin
 
     pitdroids_NOCD.xdelta - for global game version
 
-  1.3   Locate the original game .exe file (Pit Droids.exe)
+  1.3   Locate the game folder with the original game .exe file (Pit Droids.exe)
   
     It's in your game's Wine prefix: {{ game.prefix }}/drive_c/Droids/Pit Droids.exe
 
@@ -43,7 +36,13 @@ Having said that, if you wish to play without the game CD and with videos workin
   
     /home/youruser/Games/star-wars-pit-droids/drive_c/Droids/Pit Droids.exe
 
-  1.4   Open a Terminal/Command Prompt from your /Star Wars Pit Droids/ folder and run the xdelta3 patch command
+  1.4   Move the .xdelta patch file into the game folder
+
+  Example:
+  
+    /home/youruser/Games/star-wars-pit-droids/drive_c/Droids/pitdroids_NOCD.xdelta
+
+  1.5   Open a Terminal from the game folder and run the patching command
   
     xdelta3 -f -d -s [game.exe] [patch_file.xdelta] [game.exe]
 
@@ -51,7 +50,7 @@ Having said that, if you wish to play without the game CD and with videos workin
   
     xdelta3 -f -d -s "Pit Droids.exe" pitdroids_NOCD.xdelta "Pit Droids.exe"
 
-After that, the game should be ready to play without a CD inserted/mounted!
+After that, the game should be patched for compatibility with modern Windows!
 
 
 **2. QuickTime 'Safe Mode (GDI Only)' tweak**
@@ -60,7 +59,7 @@ After that, the game should be ready to play without a CD inserted/mounted!
 
   2.2   Double-click on 'QuickTime' to open the QuickTime control panel.
 
-  2.3   Go to Video Settings and select 'Safe Mode (GDI Only)'.
+  2.3   Go to Video/Advanced Settings and select 'Safe Mode (GDI Only)'.
   
 
 **TIPS & TRICKS / KNOWN ISSUES & SOLUTIONS**
@@ -75,4 +74,4 @@ If you do decide to deviate, be mindful that the default game paths need to be a
 
 **FOOT NOTES**
 
-¹The game MAY run and play without a patch, but that would at least require additional tweaking for the 16-bit SafeDisc DRM (https://www.pcgamingwiki.com/wiki/Star_Wars:_Pit_Droids#cite_note-3) which is way outside the scope of my knowledge. Even if you can get that to work, the game will still prompt you to insert your game CD before it plays, and stop you from playing if you eject the CD, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually.
+¹The game MAY run and play without a patch, but that would at least require additional tweaking for the 16-bit SafeDisc DRM for compatibility with modern versions of Windows (https://www.pcgamingwiki.com/wiki/Star_Wars:_Pit_Droids#cite_note-3) which is way outside the scope of my knowledge. Even if you could get that to work, the game would still prompt you to insert your game CD before it plays, and stop you from playing whenever you eject the CD, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually all the time.
