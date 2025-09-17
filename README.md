@@ -1,16 +1,54 @@
 # installers-4-lutris
 Custom .yml installer scripts for Lutris on Linux
-
-*Some save the boxes, some save the bits. I make sure the droid still works.*
+  
+Some save the boxes, some save the bits. I make sure the droid still works.
 
 <img width="1792" height="576" alt="idontnow_banner_github_larger" src="https://github.com/user-attachments/assets/5782370a-1ddc-4230-8f1d-e0e3e72142ce" />
 
-Preservation isn't about saving some files. It's about making sure the SCUMM Bar is never truly empty.
+This project provides custom Lutris installer scripts for older PC games, with a focus on titles released around 1998–2002. The goal is to make installation and play on modern Linux systems as seamless as possible, without requiring (too much) manual troubleshooting.  
+  
+# Current Installers:  
+[Star Wars: Pit Droids ](https://github.com/idontnow/installers-4-lutris/tree/main/star-wars-pit-droids)  
+[Sanity: Aiken’s Artifact  ](https://github.com/idontnow/installers-4-lutris/tree/main/sanity-aikens-artifact)  
+[Blair Witch Volume I–III  ](https://github.com/idontnow/installers-4-lutris/tree/main/blair-witch-volume-trilogy)  
+  
+# Planned Installers (no specific order):  
+Star Wars: DroidWorks  
+Riana Rouge  
+Discworld Noir  
+Dragonriders: Chronicles of Pern  
+Soldier of Fortune  
+American McGee’s Alice  
+Heavy Metal F.A.K.K.²  
+The Typing of the Dead  
+Gothic  
+…and more to come.  
+  
+# How to Use  
+  
+1. Install Lutris on your Linux system.  
+  
+2. Download the .yml installer file for the game you want to install.  
+  
+3. In Lutris, click + → Install from a local install script.  
+  
+4. Select the .yml file.  
+  
+5. Follow the instructions provided by the installer.  
+  
+That’s it — Lutris will handle the setup.  
+If any additional steps are needed, they will be mentioned in the script description.  
+  
+# Bonus Resources
 
-Even if the corporate pirates have forgotten the grog recipe. And the pit droids have lost the schematics.
-
-After all, what good is a treasure map if you can't even tell a green tentacle from a mighty pirate?
-
-Or if you can find no entertainment or use out of a rubber chicken with a pulley in the middle.
-
-I suggest you open your mind. It will help you on your coming journey.
+This repository also hosts copies of [generic 32bit InstallShield setup executables](https://github.com/idontnow/installers-4-lutris/tree/main/generic_32bit_installer) (versions 3 and 5).  
+These may be useful when installing games that shipped with 16-bit Windows setup executables, which cannot be executed on 64-bit Windows operating systems.  
+In those cases, you can copy the CD contents to a drive and replace the original Setup.exe from the CD with one of the provided executables, allowing the setup to execute on 64-bit Windows (which still hosts some support for 32-bit software).  
+  
+# Why Preservation Matters  
+  
+Preservation isn’t just about archiving files — it’s about keeping forgotten worlds playable.  
+  
+From pit droids keeping Watto’s podracer business running, to Agent Cain unraveling the psychic chaos of Sanity: Aiken’s Artifact, to the cursed woods of Blair Witch Vol. I–III — these experiences deserve more than to be lost to time.  
+  
+To preserve games is to preserve imagination, experimentation, and the culture of an era.  
