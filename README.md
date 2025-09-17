@@ -3,7 +3,7 @@ Custom .yml installer scripts for Lutris on Linux
   
 Some save the boxes, some save the bits. I make sure the droid still works.
 
-<img width="1792" height="576" alt="idontnow_banner_github_larger" src="https://github.com/user-attachments/assets/5782370a-1ddc-4230-8f1d-e0e3e72142ce" />
+<img width="1758" height="576" alt="idontnow_banner_github_v3_minorfixcrop_halfsized2" src="https://github.com/user-attachments/assets/8c1f282b-6b2a-4a4e-8492-122c093e4278" />
 
 This project provides custom Lutris installer scripts for older PC games, with a focus on titles released around 1998–2002. The goal is to make installation and play on modern Linux systems as seamless as possible, without requiring (too much) manual troubleshooting.  
   
