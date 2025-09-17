@@ -24,7 +24,7 @@ That said, if you wish to play without the game CD, follow these steps:
 
          Compressed archive contains patched "client.dll" and "cshell.dll" files, and some simple instructions.
       
-3. Download the .xdelta patch file for the version of the game you have from this repo
+3. Download the .xdelta patch file from this repo for the version of the game you have
       
         a)  SanityUS_NOCD.xdelta - for "Sanity: Aiken's Artifact" (US version)
         b)  SanityEU_NOCD.xdelta - for "Aiken's Artifact" (EU/UK version)*
