@@ -10,7 +10,7 @@ This project provides custom Lutris installer scripts for older PC games, with a
   
 These scripts are compatible with both native and Flatpak Lutris installations and have been tested exclusively with 64-bit Wine prefixes. 
   
-**The Goal** - to make it easy to install and play vintage Windows games on modern Linux, using automation to install the game files and configure custom settings (along with simple instructions for any manual setup).   
+The Goal is to make it easy to install and play vintage Windows games on modern Linux, using automation to install the game files and configure custom settings (along with simple instructions for any manual setup).   
   
 ## Current Installers:  
 [Star Wars: Pit Droids ](https://github.com/idontnow/installers-4-lutris/tree/main/star-wars-pit-droids)  
@@ -104,6 +104,6 @@ In the interest of keeping things somewhat kosher, my scripts require you to ins
   
 However, just as the old software they're meant to install, these scripts will eventually become obsolete. As software and operating systems evolve, these automations may one day fail. Still, I hope the research and effort that went into them will be useful for future generations of curious players and tinkerers, saving them time and frustration.  
   
-Having said that all that, I await for simpler days, when it is easy for people to legally own a working copies of the games more than a quarter-century after their original release. After all, the real goal is to get back to the important parts: expanding our imaginations in these virtual worlds, having unique experiences, and sharing our favorite ones with others.  
+Having said that all that, I await for simpler days, when it is easy for people to legally own working copies of video games more than a quarter-century after their original release. After all, the real goal is to get back to the important parts: expanding our imaginations in these virtual worlds, having unique experiences, and sharing our favorite ones with others.  
   
 If you enjoy playing any of the games mentioned here, please be sure to support the developers and their collaborators by purchasing licensed copies of their latest works! ✌️  
