@@ -4,9 +4,9 @@ https://lutris.net/games/star-wars-droidworks/
 
 **The Lutris installer file can be found on this repo for your own customization.**
 
-
 **Manual Patching REQUIRED for Star Wars: DroidWorks:**
 
+        
 The game **REQUIRES**¹ a patch that Lutris cannot apply automatically (at least not in the Flatpak version).
 
 **16-bit SecuROM patch** - .xdelta patch for playing without CD check (that is not compatible with modern version of Windows/Wine prefixes); requires xdelta and cannot be applied automatically in Flatpak version of Lutris.
@@ -16,17 +16,17 @@ Having said that, to allow the game to work properly, follow these steps:
 
 **16-bit SecuROM patch**
 
-  1.1   Download/Install xdelta
+  1.   Download/Install xdelta
 
     You can use your package manager (e.g., 'sudo apt install xdelta3')
   
   Helpful guide: https://command-not-found.com/xdelta3
 
-  1.2   Download the following .xdelta patch file from this repo
+  2.   Download the following .xdelta patch file from this repo
 
     droidworks_NOCD.xdelta - for global game version
 
-  1.3   Locate the game folder with the original game .exe file (Pit Droids.exe)
+  3.   Locate the game folder with the original game .exe file (Pit Droids.exe)
   
     It's in your game's Wine prefix: {{ game.prefix }}/drive_c/Games/Droidworks/DroidWorks.exe
 
@@ -34,13 +34,13 @@ Having said that, to allow the game to work properly, follow these steps:
   
     /home/youruser/Games/star-wars-droidworks/drive_c/Games/Droidworks/DroidWorks.exe
 
-  1.4   Move the .xdelta patch file into the game folder
+  4.   Move the .xdelta patch file into the game folder
 
   Example:
   
     /home/youruser/Games/star-wars-droidworks/drive_c/Games/Droidworks/droidworks_NOCD.xdelta
 
-  1.5   Open a Terminal from the game folder and run the patching command
+  5.   Open a Terminal from the game folder and run the patching command
   
     xdelta3 -f -d -s [game.exe] [patch_file.xdelta] [game.exe]
 
@@ -53,8 +53,8 @@ After that, the game should be patched for compatibility with modern Windows!
 
 **TIPS & TRICKS / KNOWN ISSUES & SOLUTIONS**
 
-Game may require manual tweaking in order to run properly, depending on your setup.
-What worked for me on CachyOS was enabling Gamescope inside the Lutris System options for the game. I used the Fullscreen (default) Window mode.
+This game may require manual tweaking in order to run properly, depending on your setup.
+What helped in my case was enabling Gamescope inside the Lutris System options for the game. I used the Fullscreen (default) Window mode.
 It is also known that this game "suffers from timing issues that cause the in-game clock to run slightly fast and the physics to malfunction (especially on inclines)". Forcing VSync to be ON remedies this issue, but does not fix it completely (https://www.pcgamingwiki.com/wiki/Star_Wars:_DroidWorks#Fix_color_depth).
 
 **NOTE:** install.iss is an InstallShield setup component that allows to silently install the game in the background to a default directory.
