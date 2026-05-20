@@ -20,6 +20,7 @@ The Lutris installer files can be found on this repo for your own customization.
    *Install "winetricks icodecs" in the game prefix to play videos (not included in the installer for Lutris Flatpak version compatibility). If all else fails for Lutris Flatpak - you can install icodecs using your system winetricks by specifying the wineprefix folder; then set Lutris to use that.
     
 
-**NOTE:** install.iss is an InstallShield setup component that allows to silently install the game in the background to a default directory. I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
+**NOTE:** install.iss is an InstallShield setup component that allows to silently install the game in the background to a default directory.
+A guide for making one yourself can be found here: https://docs.revenera.com/installshield24helplib/helplibrary/CreatetheResponseFile.htm
 
 It is technically not required, and you may install your game with a custom one or without it at all, if you wish. If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
