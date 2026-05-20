@@ -54,7 +54,7 @@ After that, the game should be patched for compatibility with modern Windows!
 **TIPS & TRICKS / KNOWN ISSUES & SOLUTIONS**
 
 Game may require manual tweaking in order to run properly, depending on your setup.
-What worked for me on CachyOS was enabling Gamescope inside the Lutris System options for the game. I used the Fullscreen (default) Window mode and set Game Resolution to 1280x1024.
+What worked for me on CachyOS was enabling Gamescope inside the Lutris System options for the game. I used the Fullscreen (default) Window mode.
 It is also known that this game "suffers from timing issues that cause the in-game clock to run slightly fast and the physics to malfunction (especially on inclines)". Forcing VSync to be ON remedies this issue, but does not fix it completely (https://www.pcgamingwiki.com/wiki/Star_Wars:_DroidWorks#Fix_color_depth).
 
 **NOTE:** install.iss is an InstallShield setup component that allows to silently install the game in the background to a default directory.
