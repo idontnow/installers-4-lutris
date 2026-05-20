@@ -67,7 +67,7 @@ After that, the game should be patched for compatibility with modern Windows!
 If you experience distorted sounds or visual stutter, you can try installing a newer version of QuickTime using winetricks or an external installer (https://www.pcgamingwiki.com/wiki/Star_Wars:_Pit_Droids#Videos_play_with_distorted_sound_and_visual_stutter)
 
 **NOTE:** install.iss is an InstallShield setup component that allows to silently install the game in the background to a default directory.
-I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
+A guide for making one yourself can be found here: https://docs.revenera.com/installshield24helplib/helplibrary/CreatetheResponseFile.htm
 It is technically not required, and you may install your game with a custom one or without it at all if you wish.
 If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
 
