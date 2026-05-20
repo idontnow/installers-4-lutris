@@ -1,0 +1,52 @@
+name: "Star Wars: DroidWorks"
+game_slug: star-wars-droidworks
+version: CD
+slug: star-wars-droidworks-cd
+runner: wine
+
+script:
+  game:
+    exe: $GAMEDIR/drive_c/Games/Droidworks/DroidWorks.exe
+    prefix: $GAMEDIR
+  files:
+    - 32bit_installer: https://github.com/idontnow/installers-4-lutris/raw/refs/heads/main/generic_32bit_installer/Setup.exe
+  installer:
+  - task:
+      description: Creating Wine prefix
+      name: create_prefix
+      prefix: $GAMEDIR
+  - insert-disc:
+      requires: launch.exe
+  - copy:
+      description: Copying CD files to cache
+      dst: $CACHE
+      src: $DISC
+  - move:
+      description: Trashing old 16-bit installer
+      dst: $CACHE/trash/
+      src: $CACHE/setup.exe
+  - move:
+      description: Injecting new 32-bit installer
+      dst: $CACHE/setup.exe
+      src: 32bit_installer
+  - execute:
+      command: printf "[InstallShield Silent]\nVersion=v5.00.000\nFile=Response File\n[DlgOrder]\nDlg0=SdLicense-0\nCount=12\nDlg1=AskOptions-0\nDlg2=SdAskDestPath-0\nDlg3=SdSetupTypeEx-0\nDlg4=SdSelectFolder-0\nDlg5=SdStartCopy-0\nDlg6=AskOptions-1\nDlg7=MessageBox-0\nDlg8=AskOptions-2\nDlg9=AskYesNo-0\nDlg10=AskYesNo-1\nDlg11=MessageBox-1\n[SdLicense-0]\nResult=1\n[AskOptions-0]\nResult=1\nSel-0=0\nSel-1=1\n[SdAskDestPath-0]\nszDir=C:\Games\Droidworks\nResult=1\n[SdSetupTypeEx-0]\nResult=Maximum\n[SdSelectFolder-0]\nszFolder=Lucas Learning\nResult=1\n[SdStartCopy-0]\nResult=1\n[AskOptions-1]\nResult=1\nSel-0=1\nSel-1=0\n[Application]\nName=Star Wars DroidWorks\nVersion=1.0\nCompany=Lucas Learning Ltd\n[MessageBox-0]\nResult=1\n[AskOptions-2]\nResult=1\nSel-0=0\n[AskYesNo-0]\nResult=0\n[AskYesNo-1]\nResult=0\n[MessageBox-1]\nResult=1" > "$GAMEDIR/drive_c/install.iss"
+      description: Generating silent install response file ...
+  - task:
+      args: /s /f1c:/install.iss
+      description: Silent-install response file recording, use C:/Droidworks
+      executable: $CACHE/setup.exe
+      name: wineexec
+      prefix: $GAMEDIR
+  - copy:
+      description: Copying CD movies to game folder
+      dst: $GAMEDIR/drive_c/Games/Droidworks/movie/
+      src: $CACHE/movie/
+  - task:
+      key: SourcePath
+      name: set_regedit
+      path: HKEY_LOCAL_MACHINE\Software\Wow6432Node\Lucas Learning Ltd\Star Wars DroidWorks\1.0
+      prefix: $GAMEDIR
+      type: REG_SZ
+      value: C:\\Games\\Droidworks
+
