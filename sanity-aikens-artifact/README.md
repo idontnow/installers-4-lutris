@@ -76,6 +76,6 @@ If you have no music in the main menu/cutscenes, check if **directmusic** and **
 An optional FoV fix is available (for resolutions wider than 16:9 aspect ratio) here: https://community.pcgamingwiki.com/files/file/2862-sanity-aikens-artifact-fov-fix/
 
 **NOTE:** install.iss is an InstallShield setup component that allows to silently install the game in the background to a default directory.
-I followed this guide to generate mine: https://help.kaseya.com/webhelp/en-us/5020000/index.htm?toc.htm?685.htm
+A guide for making one yourself can be found here: https://docs.revenera.com/installshield24helplib/helplibrary/CreatetheResponseFile.htm
 It is technically not required, and you may install your game with a custom one or without it at all if you wish.
 If you do decide to deviate, be mindful that the default game paths need to be adjusted accordingly in your Lutris settings!
