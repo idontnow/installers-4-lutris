@@ -16,9 +16,9 @@ The Goal is to make it easy to install and play vintage Windows games on modern 
 [Star Wars: Pit Droids ](https://github.com/idontnow/installers-4-lutris/tree/main/star-wars-pit-droids)  
 [Sanity: Aiken’s Artifact  ](https://github.com/idontnow/installers-4-lutris/tree/main/sanity-aikens-artifact)  
 [Blair Witch Volume I–III  ](https://github.com/idontnow/installers-4-lutris/tree/main/blair-witch-volume-trilogy)  
+[Star Wars: DroidWorks](https://github.com/idontnow/installers-4-lutris/tree/main/star-wars-droidworks)  
   
 ## Planned Installers:  
-[Star Wars: DroidWorks](https://lutris.net/games/star-wars-droidworks/)  
 [The Typing of the Dead](https://lutris.net/games/the-typing-of-the-dead/)  
 [Riana Rouge](https://lutris.net/games/riana-rouge/)  
 [Discworld Noir](https://lutris.net/games/discworld-noir/)  
