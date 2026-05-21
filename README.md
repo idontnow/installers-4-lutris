@@ -25,13 +25,14 @@ The Goal is to make it easy to install and play vintage Windows games on modern 
 [Dragonriders: Chronicles of Pern](https://lutris.net/games/dragonriders-chronicles-of-pern/)  
 [Heavy Metal F.A.K.K.²](https://lutris.net/games/heavy-metal-fakk-2/)  
 [American McGee’s Alice](https://lutris.net/games/american-mcgees-alice/)  
-…and more to come.  
+…and more to come. Suggestions welcome!  
   
 ## Where to Get The Games  
 
-* Some may still be purchased (boxed or otherwise) from resellers on online marketplaces like [eBay.com](https://www.ebay.com/) or [Eneba.com](https://www.eneba.com).  
+* Some may still be purchased (boxed or otherwise) from resellers on online marketplaces like [eBay.com](https://www.ebay.com/) or [Amazon.com](https://www.amazon.com/).  
 * In case a copy you own is damaged, there are various archival websites online like [archive.org](https://archive.org/) or [MyAbandonware.com](https://www.myabandonware.com/), hosting digital copies of the original game discs.  
-* Eventually, with enough interest, these seemingly abandoned games may yet appear for sale on platforms like [Steam](https://store.steampowered.com/) or [GOG](https://www.gog.com/) (make sure to vote in the [GOG Dreamlist](https://www.gog.com/dreamlist/)!)
+
+* Eventually, with enough interest, these seemingly abandoned games may yet appear for sale on platforms like [Steam](https://store.steampowered.com/) or [GOG](https://www.gog.com/) (make sure to vote in the [GOG Dreamlist](https://www.gog.com/dreamlist/)!)  
   
 ## How to Use  
   
@@ -79,15 +80,15 @@ Found a bug, want to improve an existing script, or have a new one to share? You
   
 By using the scripts and instructions provided in this project, you acknowledge and agree to the following:  
   
+**Use at Your Own Risk; No Warranty:**  
+These scripts are provided "as is" without any warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, or non-infringement. The user assumes all risk and responsibility for any loss of data, hardware damage, or any other issues that may arise from the use of these scripts.  
+  
 **Non-Profit Passion Project:**  
 This is a non-profit, passion-driven project created for the purpose of game preservation and enthusiast sharing. It is not intended for financial gain and does not generate any revenue.  
   
 **No Ownership of Third-Party Content:**  
 This project, its author, and its contributors do not claim any ownership of the games or any original software used in their installation. All copyrights, trademarks, and intellectual property for the games and their components belong to their respective owners.  
 The only original works in this repository are the Lutris installer scripts, their accompanying instructions, this README.md file, and any unique graphical assets, such as the banner image.  
-  
-**Use at Your Own Risk; No Warranty:**  
-These scripts are provided "as is" without any warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, or non-infringement. The user assumes all risk and responsibility for any loss of data, hardware damage, or any other issues that may arise from the use of these scripts.  
   
 **Copyright and Circumvention:**  
 The purpose of this project is to provide a user-friendly way to install and play vintage software. However, if any content or instructions in this repository are found to infringe upon copyright laws or laws concerning the circumvention of technological measures that control access to copyrighted works, the author is willing to promptly remove the offending files or instructions upon official request from the copyright holder.  
