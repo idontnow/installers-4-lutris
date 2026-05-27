@@ -1,0 +1,38 @@
+name: "The Typing of the Dead"
+game_slug: the-typing-of-the-dead
+version: JP CD
+slug: the-typing-of-the-dead-jp-cd
+runner: wine
+
+script:
+  game:
+    exe: $GAMEDIR/drive_c/Games/TToTD/Tod.exe
+    prefix: $GAMEDIR
+  files:
+    - boat_se_fix: https://github.com/idontnow/installers-4-lutris/raw/refs/heads/main/the-typing-of-the-dead/boat_fast2.wav
+  installer:
+  - task:
+      description: Creating Wine prefix ...
+      name: create_prefix
+      prefix: $GAMEDIR
+  - task:
+      app: cjkfonts
+      description: Installing CJK fonts for Japanese character support ...
+      name: winetricks
+      prefix: $GAMEDIR
+  - insert-disc:
+      requires: SETUP.EXE
+  - task:
+      description: Launching installer ...
+      executable: $DISC/SETUP.EXE
+      name: wineexec
+      prefix: $GAMEDIR
+  - merge:
+      description: Replacing C:/Games/TToTD/sound/SE/STAGE3_SE/boat_fast2.wav with fixed sound file ...
+      dst: $GAMEDIR/drive_c/Games/TToTD/sound/SE/STAGE3_SE/boat_fast2.wav
+      src: boat_se_fix
+
+  system:
+    env:
+      LANG: ja_JP.UTF-8
+      LC_ALL: ja_JP.UTF-8
