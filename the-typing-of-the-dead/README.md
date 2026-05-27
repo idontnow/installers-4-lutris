@@ -3,7 +3,7 @@ https://lutris.net/games/the-typing-of-the-dead/
 
 **The Lutris installer file can be found on this repo for your own customization.**
 
-**Manual Patching Required for Sanity: Aiken's Artifact to play without CD**
+**Manual Patching Required for The Typing of the Dead to play without CD**
       
 The game needs a patch that Lutris cannot apply automatically (at least not in the Flatpak version). The game can run without a patch successfully, but it will prompt you to insert your game CD before it plays, which can get annoying if you don't want to keep the disc spinning in your physical drive or mounted virtually.
             
