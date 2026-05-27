@@ -27,13 +27,13 @@ That said, if you wish to play without the game CD, follow these steps:
 3. Download the .xdelta patch file from this repo for the version of the game you have
       
         a)  SanityUS_NOCD.xdelta - for "Sanity: Aiken's Artifact" (US version)
-        b)  SanityEU_NOCD.xdelta - for "Aiken's Artifact" (EU/UK version)*
+        b)  SanityEU_NOCD.xdelta - for "Aiken's Artifact" (EU/UK version)
 
 4. Locate the folder containing the original game .exe file (sanity.exe)
 
    It's in your game's Wine prefix:
 
-         {{ game.prefix }}/drive_c/Games/Sanity/lithtech/sanity.exe
+         {{ game.prefix }}/drive_c/Games/Sanity/lithtech/
 
    Example:
 
