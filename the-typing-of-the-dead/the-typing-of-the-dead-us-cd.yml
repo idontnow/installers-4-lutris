@@ -27,7 +27,11 @@ Result=1\n[{7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdSelectFolder-0]\nszFolder=Th
       executable: $DISC/SETUP.EXE
       name: wineexec
       prefix: $GAMEDIR
-  - merge:
-      description: Replacing C:/Games/TToTD/sound/SE/STAGE3_SE/boat_fast2.wav with fixed sound file ...
+  - move:
+      description: Removing original boat_fast2.wav sound file ...
+      dst: $CACHE/trash/
+      src: $GAMEDIR/drive_c/Games/TToTD/sound/SE/STAGE3_SE/boat_fast2.wav
+  - copy:
+      description: Adding fixed boat_fast2.wav sound file ...
       dst: $GAMEDIR/drive_c/Games/TToTD/sound/SE/STAGE3_SE/boat_fast2.wav
       src: boat_se_fix

@@ -22,7 +22,11 @@ script:
       executable: $DISC/SETUP.EXE
       name: wineexec
       prefix: $GAMEDIR
-  - merge:
-      description: Replacing C:/Games/TToTD/sound/SE/STAGE3_SE/boat_fast2.wav with fixed sound file ...
+  - move:
+      description: Removing original boat_fast2.wav sound file ...
+      dst: $CACHE/trash/
+      src: $GAMEDIR/drive_c/Games/TToTD/sound/SE/STAGE3_SE/boat_fast2.wav
+  - copy:
+      description: Adding fixed boat_fast2.wav sound file ...
       dst: $GAMEDIR/drive_c/Games/TToTD/sound/SE/STAGE3_SE/boat_fast2.wav
       src: boat_se_fix
