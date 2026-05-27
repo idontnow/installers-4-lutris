@@ -18,8 +18,7 @@ script:
   - insert-disc:
       requires: SETUP.EXE
   - execute:
-      command: printf "[InstallShield Silent]\nVersion=v6.00.000\nFile=Response File\n[File Transfer]\nOverwrittenReadOnly=NoToAll\n[{7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-DlgOrder]\nDlg0={7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdLicense-0\nCount=4\nDlg1={7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdAskDestPath-\nDlg2={7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdSelectFolder-0\nDlg3={7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdFinish-0\n[{7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdLicense-0]\nResult=1\n[{7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdAskDestPath-0]\nszDir=C:\Games\TToTD\n
-Result=1\n[{7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdSelectFolder-0]\nszFolder=The Typing of The Dead US\nResult=1\n[Application]\nName=The Typing of The Dead US\nVersion=1.00.000\nCompany=SEGA\nLang=0009\n[{7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdFinish-0]\nResult=1\nbOpt1=0\nbOpt2=0\n" > "$GAMEDIR/drive_c/install.iss"
+      command: printf "[InstallShield Silent]\nVersion=v6.00.000\nFile=Response File\n[File Transfer]\nOverwrittenReadOnly=NoToAll\n[{7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-DlgOrder]\nDlg0={7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdLicense-0\nCount=4\nDlg1={7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdAskDestPath-\nDlg2={7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdSelectFolder-0\nDlg3={7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdFinish-0\n[{7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdLicense-0]\nResult=1\n[{7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdAskDestPath-0]\nszDir=C:\Games\TToTD\nResult=1\n[{7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdSelectFolder-0]\nszFolder=The Typing of The Dead US\nResult=1\n[Application]\nName=The Typing of The Dead US\nVersion=1.00.000\nCompany=SEGA\nLang=0009\n[{7CE0803C-CA6A-4D7A-8FB8-055EBB4AF141}-SdFinish-0]\nResult=1\nbOpt1=0\nbOpt2=0\n" > "$GAMEDIR/drive_c/install.iss"
       description: Generating silent install response file ...
   - task:
       args: /s /f1c:/install.iss
