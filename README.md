@@ -18,9 +18,10 @@ The Goal is to make it easy to install and play vintage Windows games on modern 
 [Blair Witch Volume I–III  ](https://github.com/idontnow/installers-4-lutris/tree/main/blair-witch-volume-trilogy)  
 [Star Wars: DroidWorks](https://github.com/idontnow/installers-4-lutris/tree/main/star-wars-droidworks)  
 [The Typing of the Dead](https://github.com/idontnow/installers-4-lutris/tree/main/the-typing-of-the-dead)  
+[Riana Rouge](https://github.com/idontnow/installers-4-lutris/tree/main/riana-rouge)  
   
 ## Planned Installers:  
-[Riana Rouge](https://lutris.net/games/riana-rouge/)  
+
 [Discworld Noir](https://lutris.net/games/discworld-noir/)  
 [Dragonriders: Chronicles of Pern](https://lutris.net/games/dragonriders-chronicles-of-pern/)  
 [Heavy Metal F.A.K.K.²](https://lutris.net/games/heavy-metal-fakk-2/)  
