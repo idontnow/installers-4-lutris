@@ -1,0 +1,57 @@
+description: Play Riana Rouge inside a native Windows 95 environment via DOSBox Pure Unleashed.
+game_slug: riana-rouge
+name: Riana Rouge
+slug: riana-rouge-iso
+notes: "- Start: Click 'Run Installed Operating System' to boot into Windows 95.\n- Install: Open 'My Computer', navigate to the 'E:' drive (Disc 1), and run SETUP.EXE. Skip installing DirectX 5.\n- Run Game: Open 'Riana.exe' from where the game is installed. Recommended to add a shortcut to it on your Desktop.\n- Swap Discs: When prompted by the game for a disc, press Ctrl+F12 to access the DOSBox Pure UI and select the INSERT option for the required disc.\n- Exit Game: If on a screen without the option to Quit, press Ctrl+F12, open the 'On-Screen Keyboard', and click 'Alt' followed by 'F4'.\n- End: Be sure to Shut Down Windows 95 before closing DOSBox to avoid data corruption and ScanDisk checks!"
+runner: linux
+version: 3 CD WIN US
+
+script:
+  files:
+    - game_cd1: N/A:Please select the Riana Rouge CD 1 image in ISO format
+    - game_cd2: N/A:Please select the Riana Rouge CD 2 image in ISO format
+    - game_cd3: N/A:Please select the Riana Rouge CD 3 image in ISO format
+    - os_img: https://lutris.nyc3.cdn.digitaloceanspaces.com/games/Windows_95/WIN95_OSR25_DBP_2Go.7z
+    - dos_emu: https://github.com/idontnow/installers-4-lutris/raw/refs/heads/main/tools/dosbox-pure-unleashed.tar.xz
+
+  game:
+    args: '"$GAMEDIR/CD_Data/Riana.m3u"'
+    exe: $GAMEDIR/DOSBoxPure_x86_64
+    working_dir: $GAMEDIR
+
+  installer:
+    - extract:
+        dst: $GAMEDIR
+        file: dos_emu
+    - extract:
+        dst: $GAMEDIR/system
+        file: os_img
+
+    - write_file:
+        file: $GAMEDIR/DOSBoxPure.cfg
+        content: |
+          {
+            "dosbox_pure_cpu_core": "normal",
+          }
+
+    - execute:
+        command: mkdir -p "$GAMEDIR/CD_Data/1" "$GAMEDIR/CD_Data/2" "$GAMEDIR/CD_Data/3"
+    - copy:
+        dst: $GAMEDIR/CD_Data/1
+        src: game_cd1
+    - copy:
+        dst: $GAMEDIR/CD_Data/2
+        src: game_cd2
+    - copy:
+        dst: $GAMEDIR/CD_Data/3
+        src: game_cd3
+
+    - execute:
+        command: |
+          find "$GAMEDIR/CD_Data/1" -type f -iname "*.iso" -exec mv {} "$GAMEDIR/CD_Data/Disc1.iso" \;
+          find "$GAMEDIR/CD_Data/2" -type f -iname "*.iso" -exec mv {} "$GAMEDIR/CD_Data/Disc2.iso" \;
+          find "$GAMEDIR/CD_Data/3" -type f -iname "*.iso" -exec mv {} "$GAMEDIR/CD_Data/Disc3.iso" \;
+          rm -rf "$GAMEDIR/CD_Data/1" "$GAMEDIR/CD_Data/2" "$GAMEDIR/CD_Data/3"
+
+    - execute:
+        command: 'printf "Disc1.iso\r\nDisc2.iso\r\nDisc3.iso\r\n" > "$GAMEDIR/CD_Data/Riana.m3u"'
