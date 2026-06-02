@@ -16,3 +16,7 @@ https://lutris.net/games/riana-rouge/
 Using 'Dynamic' or 'Auto' DOSBox CPU Core emulation method may cause the "Windows 95 I/O protect error", which prevents Windows 95 from booting. To allow Windows 95 to boot with faster than expected/modern CPUs, go to Settings > Advanced > CPU Core > set 'Normal' or 'Simple'. (NOTE: My Lutris installer script automatically sets 'Normal' by default.)
 
 Command.com/MS-DOS Shell freezes the system when opened in Windows 95 on DOSBox (not that you should need it). Workaround - press Ctrl+Alt+Delete twice to get BSOD, then hit Enter and close the Task Manager and you can proceed.
+
+Default Ctrl+F12 key combo to access DOSBox Pure Unleashed UI may interfere with KDE "Show Desktop" and other existing shortcuts. Recommended to change the Settings > General > Hotkey Modifier to your preference to use a different key combo.
+
+Use the 'On-Screen Keyboard' for sending keyboard shortcuts to Windows 95 or the game (like Alt+F4 for closing the game to avoid accidental data loss from suddenly closing DOSBox entirely without shutting down Windows first).
